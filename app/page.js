@@ -1,7 +1,26 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 
-export default function Home() {
+export async function getStaticProps() {
+  const symptoms = await client.items.all({ 'filter[type]': 'symptom' });
+
+
+
+  return {
+    props: {
+      symptoms,
+    },
+  };
+}
+
+export default function Home({symptoms}) {
+
+
+  console.log('symptoms')
+
+  console.log(symptoms)
+  console.log('symptoms')
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
