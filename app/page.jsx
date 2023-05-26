@@ -1,25 +1,26 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from 'next/image';
+import styles from './page.module.css';
+import { request } from '@/lib/datocms';
 
-export async function getStaticProps() {
-  const symptoms = await client.items.all({ 'filter[type]': 'symptom' });
+export default async function Home() {
+  const query = `{
+  allSymptoms {
+    id
+    name
+    intensity
+    _status
+    _firstPublishedAt
+  }
 
+  _allSymptomsMeta {
+    count
+  }
+}`;
+  const symptoms = await request({ query }).then((res) => {
+    return res.allSymptoms;
+  });
 
-
-  return {
-    props: {
-      symptoms,
-    },
-  };
-}
-
-export default function Home({symptoms}) {
-
-
-  console.log('symptoms')
-
-  console.log(symptoms)
-  console.log('symptoms')
+  console.info('symptoms', symptoms);
 
   return (
     <main className={styles.main}>
@@ -59,8 +60,9 @@ export default function Home({symptoms}) {
       </div>
 
       <div className={styles.grid}>
-       
+        {symptoms.length > 0 &&
+          symptoms.map((symp) => <div key={symp.id}>{symp.name}</div>)}
       </div>
     </main>
-  )
+  );
 }

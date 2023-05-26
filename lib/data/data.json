@@ -1,0 +1,51 @@
+{
+  "data": {
+    "allSymptoms": [
+      {
+        "id": "157587409",
+        "name": "Diarrhée (duplicate)",
+        "_status": "published",
+        "_firstPublishedAt": "2023-05-24T21:13:49+01:00"
+      },
+      {
+        "id": "157587408",
+        "name": "Diarrhée (duplicate)",
+        "_status": "published",
+        "_firstPublishedAt": "2023-05-24T21:13:47+01:00"
+      },
+      {
+        "id": "157587407",
+        "name": "Diarrhée (duplicate)",
+        "_status": "published",
+        "_firstPublishedAt": "2023-05-24T21:13:44+01:00"
+      },
+      {
+        "id": "157587406",
+        "name": "Diarrhée (duplicate)",
+        "_status": "published",
+        "_firstPublishedAt": "2023-05-24T21:13:46+01:00"
+      },
+      {
+        "id": "157587405",
+        "name": "Diarrhée (duplicate)",
+        "_status": "published",
+        "_firstPublishedAt": "2023-05-24T21:13:43+01:00"
+      },
+      {
+        "id": "157587404",
+        "name": "Diarrhée (duplicate)",
+        "_status": "published",
+        "_firstPublishedAt": "2023-05-24T21:13:40+01:00"
+      },
+      {
+        "id": "157587403",
+        "name": "Diarrhée",
+        "_status": "published",
+        "_firstPublishedAt": "2023-05-24T21:13:21+01:00"
+      }
+    ],
+    "_allSymptomsMeta": {
+      "count": 7
+    }
+  }
+}
